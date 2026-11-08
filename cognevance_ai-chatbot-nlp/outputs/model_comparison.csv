@@ -1,0 +1,4 @@
+model,cv_accuracy,holdout_accuracy,holdout_macro_f1,external_accuracy,external_in_scope_accuracy,external_macro_f1
+Logistic Regression,0.6224,0.6203,0.6259,0.9737,0.9904,0.9782
+Linear SVM (calibrated),0.6198,0.6456,0.6521,0.9474,0.9615,0.9509
+Naive Bayes,0.5968,0.6329,0.6111,0.9386,0.9519,0.9448

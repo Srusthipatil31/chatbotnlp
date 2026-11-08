@@ -1,0 +1,31 @@
+,precision,recall,f1-score,support
+affirm,1.0,1.0,1.0,4.0
+ai_info,1.0,1.0,1.0,4.0
+bot_name,1.0,0.75,0.857,4.0
+capabilities,1.0,1.0,1.0,4.0
+certificate,1.0,1.0,1.0,4.0
+contact_support,1.0,1.0,1.0,4.0
+courses,1.0,1.0,1.0,4.0
+creator,1.0,1.0,1.0,4.0
+date,1.0,1.0,1.0,4.0
+deny,1.0,1.0,1.0,4.0
+enrollment,0.8,1.0,0.889,4.0
+fallback,1.0,0.8,0.889,10.0
+goodbye,1.0,1.0,1.0,4.0
+greeting,1.0,1.0,1.0,4.0
+help,1.0,1.0,1.0,4.0
+how_are_you,0.8,1.0,0.889,4.0
+internship,1.0,1.0,1.0,4.0
+joke,1.0,1.0,1.0,4.0
+mood_bad,1.0,1.0,1.0,4.0
+mood_good,1.0,1.0,1.0,4.0
+pricing,0.8,1.0,0.889,4.0
+programming_help,1.0,1.0,1.0,4.0
+refund,1.0,1.0,1.0,4.0
+thanks,1.0,1.0,1.0,4.0
+time,1.0,1.0,1.0,4.0
+weather,1.0,1.0,1.0,4.0
+working_hours,1.0,1.0,1.0,4.0
+accuracy,0.974,0.974,0.974,0.974
+macro avg,0.978,0.983,0.978,114.0
+weighted avg,0.979,0.974,0.974,114.0

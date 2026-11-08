@@ -1,0 +1,13 @@
+{
+  "chosen_model": "Logistic Regression",
+  "confidence_threshold": 0.2,
+  "n_training_patterns": 392,
+  "n_intents": 27,
+  "external_test": {
+    "n_queries": 114,
+    "accuracy": 0.9737,
+    "macro_f1": 0.9782,
+    "in_scope_accuracy": 0.9904,
+    "out_of_scope_rejected": 0.8
+  }
+}

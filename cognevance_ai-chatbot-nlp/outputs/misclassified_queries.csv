@@ -1,0 +1,4 @@
+text,intent,predicted,confidence
+are you a robot,bot_name,how_are_you,0.406
+what is the price of bitcoin,fallback,pricing,0.74
+how do i cook pasta,fallback,enrollment,0.455

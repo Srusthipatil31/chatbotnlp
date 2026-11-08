@@ -1,0 +1,115 @@
+text,intent
+hey buddy,greeting
+hello good morning to you,greeting
+yo hi,greeting
+hi cogni,greeting
+see you tomorrow,goodbye
+ok bye for now,goodbye
+i am heading out goodbye,goodbye
+gotta run bye,goodbye
+thanks so much for that,thanks
+thank you very much,thanks
+that was really helpful thanks,thanks
+much appreciated,thanks
+what's your name,bot_name
+are you a robot,bot_name
+what do i call you,bot_name
+tell me who you are,bot_name
+what are the things you can help with,capabilities
+how can you assist me,capabilities
+what all can you do,capabilities
+what are you able to do,capabilities
+who developed you,creator
+who is the person that built you,creator
+which technology do you use,creator
+who wrote your code,creator
+which courses do you have,courses
+can you list the available courses,courses
+do you teach data science,courses
+what programs can i take,courses
+how much is the course,pricing
+what is the cost of enrolling,pricing
+do you offer any discount for students,pricing
+is the course free of charge,pricing
+how do i join,enrollment
+i would like to register for a course,enrollment
+what is the process to sign up,enrollment
+how can i apply for admission,enrollment
+i want my money refunded,refund
+how do i cancel and get my payment back,refund
+what is your refund policy,refund
+can i get a refund if i cancel,refund
+will i get a certificate at the end,certificate
+how can i download my certificate,certificate
+do i receive a completion certificate,certificate
+are your certificates recognized,certificate
+are there any internships available,internship
+how can i apply for the internship,internship
+how long does the internship last,internship
+do interns get a stipend,internship
+how can i contact support,contact_support
+i want to talk to someone from your team,contact_support
+what is your support email,contact_support
+i have an issue with my account please connect me to an agent,contact_support
+when is your support team available,working_hours
+what are your office hours,working_hours
+are you open on sundays,working_hours
+what time does support close,working_hours
+what is the current time,time
+can you tell me what time it is,time
+tell me the time now,time
+what time is it right now,time
+what is today's day and date,date
+tell me today's date,date
+what's the date,date
+which date is it today,date
+tell me another joke,joke
+can you make me laugh,joke
+i want something funny,joke
+say a joke,joke
+is it going to be sunny today,weather
+what is the weather like,weather
+will it rain tomorrow,weather
+how is the temperature outside,weather
+how can i start learning python,programming_help
+which programming language is best for a beginner,programming_help
+how do i get started with coding,programming_help
+tips to become a good programmer,programming_help
+what exactly is machine learning,ai_info
+can you explain what ai is,ai_info
+what is nlp,ai_info
+explain deep learning to me,ai_info
+i am feeling great today,mood_good
+i am doing really well,mood_good
+i am very happy today,mood_good
+feeling pretty good,mood_good
+i am feeling sad today,mood_bad
+i feel so tired and stressed,mood_bad
+i am having a terrible day,mood_bad
+i feel really low,mood_bad
+how are you doing today,how_are_you
+how is everything with you,how_are_you
+how's it going,how_are_you
+are you doing well,how_are_you
+yes sure,affirm
+yeah that is correct,affirm
+okay sounds good,affirm
+yes of course,affirm
+no thanks,deny
+nope not now,deny
+i don't want that,deny
+no not really,deny
+please help me,help
+can you assist me with something,help
+i need some help,help
+i want some assistance,help
+what is the capital of france,fallback
+who won the football match yesterday,fallback
+book me a flight to delhi,fallback
+what is the price of bitcoin,fallback
+how do i cook pasta,fallback
+play some music,fallback
+translate this sentence to spanish,fallback
+asdf qwerty zxcv,fallback
+tell me about the stock market,fallback
+what is the meaning of life,fallback

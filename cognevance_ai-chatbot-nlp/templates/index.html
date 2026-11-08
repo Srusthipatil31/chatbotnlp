@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ bot_name }} – NLP Chatbot</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#eef2f7; display:flex;
+         justify-content:center; align-items:center; min-height:100vh; }
+  .chat { width:min(480px,96vw); height:min(680px,94vh); background:#fff; border-radius:16px;
+          box-shadow:0 10px 30px rgba(0,0,0,.12); display:flex; flex-direction:column; overflow:hidden; }
+  header { background:#2f6fb7; color:#fff; padding:16px 20px; }
+  header h1 { margin:0; font-size:18px; } header p { margin:2px 0 0; font-size:12px; opacity:.85; }
+  #log { flex:1; padding:16px; overflow-y:auto; display:flex; flex-direction:column; gap:10px; }
+  .msg { max-width:80%; padding:10px 14px; border-radius:14px; line-height:1.4; font-size:14px; white-space:pre-wrap; }
+  .bot { background:#e9eef5; color:#1d2733; align-self:flex-start; border-bottom-left-radius:4px; }
+  .user { background:#2f6fb7; color:#fff; align-self:flex-end; border-bottom-right-radius:4px; }
+  .meta { font-size:11px; color:#6b7785; margin:2px 4px 0; }
+  .meta.user { align-self:flex-end; } .meta.bot { align-self:flex-start; }
+  form { display:flex; gap:8px; padding:12px; border-top:1px solid #e3e8ef; }
+  input { flex:1; padding:11px 14px; border:1px solid #cfd8e3; border-radius:22px; font-size:14px; outline:none; }
+  input:focus { border-color:#2f6fb7; }
+  button { background:#2f6fb7; color:#fff; border:0; border-radius:22px; padding:0 20px; font-size:14px; cursor:pointer; }
+  button:hover { background:#255a96; }
+</style>
+</head>
+<body>
+<div class="chat">
+  <header><h1>{{ bot_name }} – AI Chatbot</h1><p>NLP intent recognition · TF-IDF + Logistic Regression</p></header>
+  <div id="log"></div>
+  <form id="form" autocomplete="off">
+    <input id="msg" placeholder="Type a message, e.g. “What courses do you offer?”" autofocus>
+    <button>Send</button>
+  </form>
+</div>
+<script>
+const log = document.getElementById("log"), form = document.getElementById("form"), input = document.getElementById("msg");
+function add(text, who, meta) {
+  const d = document.createElement("div"); d.className = "msg " + who; d.textContent = text; log.appendChild(d);
+  if (meta) { const m = document.createElement("div"); m.className = "meta " + who; m.textContent = meta; log.appendChild(m); }
+  log.scrollTop = log.scrollHeight;
+}
+add("Hello! I'm {{ bot_name }}. Ask me about courses, fees, enrollment, refunds, certificates or internships.", "bot");
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const text = input.value.trim(); if (!text) return;
+  add(text, "user"); input.value = "";
+  try {
+    const res = await fetch("/chat", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({message:text})});
+    const data = await res.json();
+    add(data.reply, "bot", "intent: " + data.intent + " · confidence " + data.confidence);
+  } catch (err) { add("Sorry, I could not reach the server.", "bot"); }
+});
+</script>
+</body>
+</html>
